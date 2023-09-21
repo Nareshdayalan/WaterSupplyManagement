@@ -1,0 +1,16 @@
+<html>
+<head>
+  <title>The Supplier</title>
+</head>
+<body>
+
+<h1>Suppliers</h1>
+  
+<ul>
+  {% for x in supplier %}
+   <li> <a href = "details/{{x.id}}"> {{x.name}} </a></li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>               

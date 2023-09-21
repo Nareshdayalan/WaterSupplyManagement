@@ -1,0 +1,73 @@
+<html>
+<body>
+
+<h1>Watercan Prices</h1>
+    </h5>FILTER</h5>
+<ol>
+    {% for x in watercan_prices %}
+    <li>{{x.brand}} {{x.price}}</li>
+    {% endfor %}
+</ol>
+
+
+<h1>Customers List</h1>
+     <h5>ASCE</h5>
+<ol>
+  {% for x in customers %}
+    <li>{{x.name}} </li>
+  {% endfor %}
+</ol>
+
+
+
+<h1>Supplier List</h1>
+    <h5>DESC</h5>
+<ol>
+  {% for x in supplier %}
+    <li>{{x.name}}</li>
+  {% endfor %}
+</ol>
+
+
+<h1>Watercan</h1>
+    <h5>EXCLUDE</h5>
+<ol>
+  {% for x in watercan %}
+    <li>{{x.brand}}</li>
+  {% endfor %}  
+</ol>
+
+<h1>Watercan</h1>
+   <h5>DELETE</h5>
+<ol>
+   {% for x in watercan %} 
+     <li>{{x.brand}}</li>
+   {% endfor %}
+</ol>
+
+<h1>CustomerEmail</h1>
+   <h5>GET</h5>
+<ul>
+   <li>{{customers_email.email}}</li>
+</ul>   
+
+<h1>FirstCustomer</h1>
+   <h5>FIRST</h5>
+<ul>
+    <li>{{first_customer.name}}</li>
+</ul>
+
+<h1>LastCustomer</h1>
+   <h5>LAST</h5>
+<ul>
+    <li>{{last_customer.name}}</li>
+</ul> 
+
+<h1>Customer_List</h1>
+  <h5>VALUE LIST</h5>
+<ul> 
+      <li>{{customers_list}}</li>
+</ul>
+
+</body>
+</html>

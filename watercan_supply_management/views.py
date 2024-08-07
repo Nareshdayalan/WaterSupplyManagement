@@ -186,6 +186,7 @@ class GetWatercanDetails(APIView):
       data = request.data
       watercan_data = Watercan.objects.get(id = data ['id'])
       serializer_watercan = WatercanSerializers(watercan_data)
+      print(serializer_watercan)
       return Response(serializer_watercan.data)
       
 

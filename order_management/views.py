@@ -103,6 +103,19 @@ class GetPaymentDetails(APIView):
         return Response(serializer_payment.data)          
 
 
-        
+class GetPaymentDetails(APIView):
+    def post(self,request):
+        data = request.data
+        payment_data = Payment.objects.get(id = data['id'])
+        serializer_payment = PaymentSerializers(payment_data)
+        return Response(serializer_payment.data)  
+
+
+class GetPaymentDetails(APIView):
+    def post(self,request):
+        data = request.data
+        payment_data = Payment.objects.get(id = data['id'])
+        serializer_payment = PaymentSerializers(payment_data)
+        return Response(serializer_payment.data)        
 
     

@@ -32,9 +32,9 @@ class AddOrder(APIView):
                 if 'is_completed' in data:
                     order.is_completed = data['is_completed']
                 if 'watercan_info' in data:
-                    order.watercan_info.set(data['watercan_info'])
+                    order.watercan_info.add(data['watercan_info'])
                 order.save()
-                return Response({"Message":"order detials updated successfully "})   
+                return Response({"Message":"order detials updated successfully what is "})   
         else:
             return Response({"Message":"invalid params"})     
 
